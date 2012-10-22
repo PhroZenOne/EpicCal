@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/GEAR/!svn/ver/2819/EpicCal
+END
+test.in
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/GEAR/!svn/ver/2816/EpicCal/test.in
+END
+.cproject
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/GEAR/!svn/ver/2784/EpicCal/.cproject
+END
+lab23.in
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/GEAR/!svn/ver/2803/EpicCal/lab23.in
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/GEAR/!svn/ver/2784/EpicCal/.project
+END
+EpicCal.exe.stackdump
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/GEAR/!svn/ver/2804/EpicCal/EpicCal.exe.stackdump
+END
+out
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/GEAR/!svn/ver/2818/EpicCal/out
+END
+lab23.out
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/GEAR/!svn/ver/2804/EpicCal/lab23.out
+END
+result.txt
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/GEAR/!svn/ver/2818/EpicCal/result.txt
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/GEAR/!svn/ver/2819/EpicCal/src
+END
+gregorian.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/GEAR/!svn/ver/2818/EpicCal/src/gregorian.h
+END
+kattistime.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/GEAR/!svn/ver/2784/EpicCal/src/kattistime.cpp
+END
+date.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/GEAR/!svn/ver/2819/EpicCal/src/date.cpp
+END
+kattistime.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/GEAR/!svn/ver/2784/EpicCal/src/kattistime.h
+END
+calendar.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/GEAR/!svn/ver/2819/EpicCal/src/calendar.h
+END
+date.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/GEAR/!svn/ver/2818/EpicCal/src/date.h
+END
+latin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/GEAR/!svn/ver/2818/EpicCal/src/latin.cpp
+END
+julian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/GEAR/!svn/ver/2818/EpicCal/src/julian.cpp
+END
+gregorian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/GEAR/!svn/ver/2818/EpicCal/src/gregorian.cpp
+END
+cprog09lab23.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/GEAR/!svn/ver/2818/EpicCal/src/cprog09lab23.cpp
+END
+OldCode._cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/GEAR/!svn/ver/2817/EpicCal/src/OldCode._cpp
+END
+latin.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/GEAR/!svn/ver/2819/EpicCal/src/latin.h
+END
+julian.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/GEAR/!svn/ver/2818/EpicCal/src/julian.h
+END

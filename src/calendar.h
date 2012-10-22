@@ -1,0 +1,118 @@
+#ifndef CALENDAR_H_
+#define CALENDAR_H_
+
+// projektlokala headerfiler
+#include "date.h"
+
+// STL headerfiler
+#include <stdexcept>
+#include <iostream>
+#include <vector>
+#include <map>
+#include <list>
+#include <algorithm>
+
+namespace lab2 {
+
+template<class T>
+class Calendar {
+public:
+
+	std::map<T, std::vector<std::string> > events;
+	T date;
+
+	Calendar() {
+	}
+
+	Calendar(const Date & in) :
+			date(T(in)) {
+	}
+
+	template<class S> Calendar(const Calendar<S> & in) {
+		if ((void*) this != (void*) (&in)) {
+			date = T(in.date);
+			typename std::map<S, std::vector<std::string> >::const_iterator it;
+			//http://pages.cs.wisc.edu/~driscoll/typename.html
+			for (it = in.events.begin(); it != in.events.end(); it++) {
+				events[T(it->first)] = it->second;
+			}
+		}
+	}
+
+	bool set_date(int year, int month, int day) {
+		try {
+			date = T(year, month, day);
+		} catch (std::out_of_range & e) {
+			return false;
+		}
+		return true;
+	}
+
+	bool add_event(std::string event) {
+		return add_event(event, date.day(), date.month(), date.year());
+	}
+
+	bool add_event(std::string happening, int day) {
+		return add_event(happening, day, date.month(), date.year());
+	}
+
+	bool add_event(std::string happening, int day, int month) {
+		return add_event(happening, day, month, date.year());
+	}
+
+	bool add_event(std::string happening, int day, int month, int year) {
+		try {
+			std::vector<std::string> & eventList = events[T(year, month, day)];
+			std::vector<std::string>::iterator trg = std::find(eventList.begin(), eventList.end(), happening);
+			if (trg == eventList.end()) {
+				eventList.push_back(happening);
+				return true;
+			}
+		} catch (std::out_of_range & e) {
+			return false;
+		}
+		return false;
+	}
+
+	bool remove_event(std::string happening) {
+		return remove_event(happening, date.day(), date.month(), date.year());
+	}
+
+	bool remove_event(std::string happening, int day) {
+		return remove_event(happening, day, date.month(), date.year());
+	}
+
+	bool remove_event(std::string happening, int day, int month) {
+		return remove_event(happening, day, month, date.year());
+	}
+
+	bool remove_event(std::string happening, int day, int month, int year) {
+		try {
+			std::vector<std::string> & eventList = events[T(year, month, day)];
+			std::vector<std::string>::iterator trg = std::find(eventList.begin(), eventList.end(), happening);
+			if (trg != eventList.end()) {
+				eventList.erase(trg);
+				return true;
+			}
+		} catch (std::out_of_range & e) {
+			return false;
+		}
+		return false;
+	}
+
+	friend std::ostream & operator<<(std::ostream & out, const Calendar & cal) {
+		typename std::map<T, std::vector<std::string> >::const_iterator it;
+		for (it = cal.events.begin(); it != cal.events.end(); it++) {
+			if (it->first > cal.date) {
+				std::vector<std::string> dayEvents = it->second;
+				for (unsigned int i = 0; i < dayEvents.size(); i++) {
+					out << it->first << " : " << dayEvents[i] << "\n";
+				}
+			}
+		}
+		return out;
+	}
+};
+
+} // end of namespace
+#endif

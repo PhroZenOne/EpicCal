@@ -1,0 +1,33 @@
+
+	/*
+		// invariant copy constructor
+		Calendar(const Calendar & in) :	date(in.date) {
+			for (CMapIt it = in.events.begin(); it != in.events.end(); it++) {
+				events[T(it->first)] = it->second;
+			}
+		}*/
+
+		// covariant copy constructor
+	/*
+	Calendar & operator=(const Calendar & in) {
+		if(this == &in){
+			return *this;
+		}
+		date = in.date;
+		events.clear();
+		for (CMapIt it = in.events.begin(); it != in.events.end(); it++) {
+			events[T(it->first)] = it->second;
+		}
+		return *this;
+	}*/
+/*
+	// covariant operator
+	template<class S> Calendar & operator=(const Calendar<S> & in) {
+		date = T(in.date);
+		events.clear();
+		typename std::map<S, std::vector<std::string> >::const_iterator it;
+		for (it = in.events.begin(); it != in.events.end(); it++) {
+			events[T(it->first)] = it->second;
+		}
+		return *this;
+	}*/
